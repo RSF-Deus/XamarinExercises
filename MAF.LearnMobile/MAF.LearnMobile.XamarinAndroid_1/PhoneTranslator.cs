@@ -5,7 +5,7 @@ namespace Core
 {
     public static class PhonewordTranslator
     {
-        public static string ToNumber ( string raw )
+        public static string ToNumber (string raw)
         {
             if ( string.IsNullOrWhiteSpace( raw ) )
                 return "";
@@ -30,12 +30,12 @@ namespace Core
             return newNumber.ToString();
         }
 
-        static bool Contains ( this string keyString , char c )
+        static bool Contains (this string keyString , char c)
         {
             return keyString.IndexOf( c ) >= 0;
         }
 
-        static int? TranslateToNumber ( char c )
+        static int? TranslateToNumber (char c)
         {
             if ( "ABC".Contains( c ) )
                 return 2;
