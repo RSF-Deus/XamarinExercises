@@ -19,9 +19,12 @@ namespace MAF.LearnMobile.XamarinAndroid_1
         {
             base.OnCreate( savedInstanceState );
 
+            //SetContentView( Resource.Layout.activity_main );
+
             // Create your application here
             var phoneNumbers = Intent.Extras.GetStringArrayList( "phone_numbers" ) ?? new string[0];
             this.ListAdapter = new ArrayAdapter<string>( this, Android.Resource.Layout.SimpleListItem1, phoneNumbers );
+            
         }
     }
 }
